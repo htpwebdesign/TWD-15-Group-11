@@ -1,3 +1,103 @@
 @charset "utf-8";
-/* CSS Document */
+
+@import "reset";
+@import "variables";
+@import "css3-minxins";
+
+
+//  general styles
+
+body {
+	background-image: url('../images/bg.jpg');
+}
+
+a {
+	text-decoration: none;
+}
+
+// header styles
+
+header {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+}
+
+.top-header {
+	width: calc(70%);
+	height: 50px;
+	margin: 0 auto;
+	// border: 2px solid blue;
+}
+
+h1 {
+	float: left;
+	font: {
+		family: $headFont;
+		size: 2rem;
+		weight: bold;		
+	}
+	color: $mainColor;
+	text-transform: uppercase;
+	line-height: 50px;
+
+	& span {
+		font: {
+			weight: 400;
+		}
+	}
+
+}
+
+.social {
+	float: right;
+	width: 100px;
+	line-height: 50px;
+}
+
+.social a {
+	letter-spacing: 6px;
+	color: $mainColor;
+}
+
+
+// nav styles
+
+nav {
+	display: flex;
+	width: 100%;
+	height: 25px;
+	background-color: $mainColor;
+	ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	li {
+		list-style: none;
+	}
+}
+
+.navbar {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.navbar a {
+	color: white;
+	font: {
+		family: $navFont;
+		size: 14px;
+	}
+	padding: 0px 10px;
+	// background-color: lighten($mainColor, 30);
+	line-height: 25px;
+}
+
+
+
+
+
+
+
 
