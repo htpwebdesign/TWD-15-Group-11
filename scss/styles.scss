@@ -24,37 +24,35 @@ a {
 
 header {
 	width: 100%;
-	height: 50px;
+//	height: 50px;
 	background-color: white;
+    position: relative;
+        border: 2px solid red;
+
 }
 
 .top-header {
 	width: $mainWidth;
-	height: 50px;
+//	height: 70px;
 	margin: 0 auto;
-	// border: 2px solid blue;
-    h1 {
-	float: left;
-	font: {
-		family: $headFont;
-		size: 2rem;
-		weight: bold;		
-	}
-	color: $mainColor;
-	text-transform: uppercase;
-	line-height: 50px;
-
-	& span {
-		font: {
-			weight: 400;
-		}
-	}
-
-    }
 }
 
 .logo {
-	width: 30%;
+    
+    background-image: url(/images/logo.png);
+    background-repeat: no-repeat;
+	width: 400px;
+    height: 50px;;
+    margin-top: 15px;
+    float: left;
+    
+    @media (max-width:570px) {
+       
+        background-image: url(/images/small_logo.jpg);
+        background-repeat: no-repeat;
+        
+    }
+    
 }
 
 .social {
@@ -67,6 +65,42 @@ header {
 	letter-spacing: 6px;
 	color: $mainColor;
 }
+.search {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    
+    @media (max-width:770px) {
+       right: 20px;
+       bottom: 35px;
+        
+    }
+}
+
+form input[type="text"]{
+    width: 120px;
+    position: relative;
+    
+    height: 25px;
+    font: {
+        size:0.7rem;
+    }
+    padding-left: 5px;
+    background: $gray-light;
+    border: none;
+    
+    
+}
+
+ .fa-search { 
+     position: absolute;
+     z-index: 555;
+     bottom: 5px;
+     right: 10px;
+     font-size: 15px;
+     color: $mainColor;
+}
+
 
 
 // nav styles
@@ -95,7 +129,7 @@ nav {
 	width: $mainWidth;
     height: 25px;
 	margin: 0 auto;
-    position: relative;
+//    position: relative;
     background: $mainColor;
     
     a {
@@ -109,28 +143,6 @@ nav {
     }
 }
 
-form input[type="text"]{
-    width: 120px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    font: {
-        size:0.7rem;
-    }
-    padding-left: 5px;
-    background: $gray-light;
-    border: none;
-}
-
- .fa-search { 
-     position: absolute;
-     z-index: 555;
-     top: 5px;
-     right: 7px;
-     font-size: 15px;
-     color: $mainColor;
-}
 
 
 .wrapper{
@@ -144,7 +156,7 @@ form input[type="text"]{
 //container styles
 
 .container{
-    margin: 30px auto;
+    margin: 5px auto;
     width: ($mainWidth - 200px);
     float: left;
 //    display:flex;
@@ -153,52 +165,9 @@ form input[type="text"]{
 }
 
 @import "hero-section";
+@import "article-section";
 
-article {
-    background: white;
-    padding-bottom: 30px;
-    margin-bottom: 1%;
-    
-    h1 {
-        font: {
-            weight: 800;
-            size: 1.9rem;
-        }
-        padding-left: 10px;
-        padding-top: 10px;
-        color: $mainColor;
-    }
-    
-    p {
-        font: {
-        size:0.7rem;
-        float: none;
-        }
-        padding-left: 10px;
-    }
-    img {
-        padding:10px;
-    }
-    
-    h3 {
-        background: $mainColor;
-        font: {
-            size: 1.1rem;
-        }
-        color: white;
-        margin-right: 10px;
-        margin-top: 20px;
-    }
-}
 
-.readmore {
-    float: right;
-    font: {
-        size:0.8rem;
-        weight: bold;
-    }
-    padding: 2px;
-}
 
 //sidebar styles
 
@@ -207,6 +176,11 @@ article {
     margin-left: 5px;
     width: 195px;
     float: left;
+    
+    @media (max-width:770px) {
+       display: none; 
+        
+    }
 }
 
 .sidbar-header {

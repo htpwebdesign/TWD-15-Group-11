@@ -1,0 +1,52 @@
+.articles-container{
+    margin-top: 5px;
+    width: 100%;
+}
+
+article {
+    position: relative;
+    background: white;
+    padding-bottom: 30px;
+    margin-bottom: 1%;
+    
+    h1 {
+        font: {
+            weight: 800;
+            size: 1.9rem;
+        }
+        padding-left: 10px;
+        padding-top: 10px;
+        color: $mainColor;
+    }
+    
+    p {
+        font: {
+        size:0.7rem;
+        float: none;
+        }
+        padding-left: 10px;
+    }
+    img {
+        padding:10px;
+    }
+    
+    h3 {
+        position: absolute;
+        background: $mainColor;
+        bottom: 5px;
+        right: 5px;
+        font: {
+            size: 1.1rem;
+        }
+        color: white;
+    }
+}
+
+.readmore {
+    float: right;
+    font: {
+        size:0.8rem;
+        weight: bold;
+    }
+    padding: 2px;
+}
