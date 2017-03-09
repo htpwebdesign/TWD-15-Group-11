@@ -27,20 +27,23 @@ header {
 //	height: 50px;
 	background-color: white;
     position: relative;
-        border: 2px solid red;
-
 }
 
 .top-header {
 	width: $mainWidth;
 //	height: 70px;
 	margin: 0 auto;
+	@media (max-width:770px) {
+	    margin: 0 10px;
+	    width: 100%;
+	}
 }
 
 .logo {
     
-    background-image: url(/images/logo.png);
+    background-image: url(../images/logo.png);
     background-repeat: no-repeat;
+    background-size: 70%;
 	width: 400px;
     height: 50px;;
     margin-top: 15px;
@@ -48,32 +51,37 @@ header {
     
     @media (max-width:570px) {
        
-        background-image: url(/images/small_logo.jpg);
+        background-image: url(../images/small_logo.jpg);
         background-repeat: no-repeat;
-        
+        background-size: 15%;
     }
     
 }
 
 .social {
 	float: right;
-	width: 100px;
-	line-height: 50px;
+	margin-top: 18px;
+	width: 90px;
+	height: 28px;
+	background-image: url(../images/social_media_sprite.png);
+	background-position: 100% 5%;
+	background-repeat: no-repeat;
+	// background-size: 100%;
+	@media (max-width:770px) {
+	    float:none;
+	    position: absolute;
+	    right: 1%;
+	}
 }
 
-.social a {
-	letter-spacing: 6px;
-	color: $mainColor;
-}
 .search {
     position: absolute;
-    right: 25px;
+    right: 0;
     bottom: 0;
     
     @media (max-width:770px) {
-       right: 20px;
-       bottom: 35px;
-        
+       right: 110px;
+       bottom: 45px;      
     }
 }
 
@@ -118,6 +126,9 @@ nav {
     
     & li:last-child  {
         margin-right: 100px;
+        @media (max-width:700px) {
+        	margin-right: 0;
+        }
     }
 
 	li {
@@ -129,39 +140,49 @@ nav {
 	width: $mainWidth;
     height: 25px;
 	margin: 0 auto;
-//    position: relative;
+    position: relative;
     background: $mainColor;
     
     a {
         color: white;
         font: {
-		family: $navFont;
-		size: 14px;
+			family: $navFont;
+			size: 14px;
         }
 
-        line-height: 25px;
+        line-height: 25px; 
+          
     }
+
 }
 
 
 
 .wrapper{
     margin: 0 auto;
-    width: $mainWidth;
+    width: $mainWidth;   
     font: {
         family:$bodyFont;
+    }
+    @media (max-width:770px) {
+        width: 100%;
     }
 }
 
 //container styles
 
 .container{
-    margin: 5px auto;
+    margin: 10px auto;
     width: ($mainWidth - 200px);
     float: left;
 //    display:flex;
 //    flex-wrap: wrap;
 //    flex-direction: column;
+	@media (max-width:770px) {
+	    width: 100%;
+	    // margin: 10px 10px;
+	}
+
 }
 
 @import "hero-section";
@@ -172,7 +193,7 @@ nav {
 //sidebar styles
 
 .sidebar{
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 5px;
     width: 195px;
     float: left;
@@ -212,7 +233,7 @@ nav {
     width: 100px;
     margin-right: 40px;
     font: {
-        size: 0.7vw;
+        size: 0.8rem;
     }
     float: right;
     height: 50px;
