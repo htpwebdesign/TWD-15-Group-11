@@ -4,4 +4,12 @@ $navFont: Roboto Condensed, Arial, sans-serif;
 $headFont: Roboto Condensed, Arial, sans-serif;
 $bodyFont: Roboto, sans-serif;
 
-$mainColor: #2261d7;
+$gray:gray;
+$gray-light: lighten($gray,40);
+$gray-lighter: lighten($gray,80);
+$mainColor: #1b7bb9;
+$navColor:#005991;
+$footerColor:#005991;
+
+
+$mainWidth:760px;

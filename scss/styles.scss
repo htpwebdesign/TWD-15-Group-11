@@ -7,6 +7,11 @@
 
 //  general styles
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 body {
 	background-image: url('../images/bg.jpg');
 }
@@ -24,13 +29,11 @@ header {
 }
 
 .top-header {
-	width: calc(70%);
+	width: $mainWidth;
 	height: 50px;
 	margin: 0 auto;
 	// border: 2px solid blue;
-}
-
-h1 {
+    h1 {
 	float: left;
 	font: {
 		family: $headFont;
@@ -47,7 +50,10 @@ h1 {
 		}
 	}
 
+    }
 }
+
+
 
 .social {
 	float: right;
@@ -67,11 +73,16 @@ nav {
 	display: flex;
 	width: 100%;
 	height: 25px;
-	background-color: $mainColor;
+	background-color: $navColor;
+    
 	ul {
 		display: flex;
 		justify-content: space-around;
 	}
+    
+    & li:last-child  {
+        margin-right: 100px;
+    }
 
 	li {
 		list-style: none;
@@ -79,25 +90,228 @@ nav {
 }
 
 .navbar {
-	width: 70%;
+	width: $mainWidth;
+    height: 25px;
 	margin: 0 auto;
+    position: relative;
+    background: $mainColor;
+    
+    a {
+        color: white;
+        font: {
+		family: $navFont;
+		size: 14px;
+        }
+
+        line-height: 25px;
+    }
 }
 
-.navbar a {
-	color: white;
+form input[type="text"]{
+    width: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font: {
+        size:0.7rem;
+    }
+    padding-left: 5px;
+    background: $gray-light;
+    border: none;
+}
+
+ .fa-search { 
+     position: absolute;
+     z-index: 555;
+     top: 5px;
+     right: 7px;
+     font-size: 15px;
+     color: $mainColor;
+}
+
+
+.wrapper{
+    margin: 0 auto;
+    width: $mainWidth;
+    font: {
+        family:$bodyFont;
+    }
+}
+
+//container styles
+
+.container{
+    margin: 30px auto;
+    width: ($mainWidth - 200px);
+    float: left;
+}
+
+
+figure {
+    position: relative;
+    
+    img {
+    display: block;
+    width: (($mainWidth - 200px) / 2) - 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+//    float: left;
+    }
+    
+    &:first-child img{
+    width: ($mainWidth - 200px);
+    margin-right: 20px;
+    }
+}
+
+figcaption {
+    background: rgba(0, 0, 0, 0.5);
+    width: ($mainWidth - 240px) / 2;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+article {
+    background: white;
+    padding-bottom: 40px;
+    margin-bottom: 1%;
+    
+    h1 {
+        font: {
+            weight: 800;
+            size: 1.9rem;
+        }
+        padding-left: 10px;
+        padding-top: 10px;
+        color: $mainColor;
+    }
+    
+    p {
+        font: {
+        size:0.7rem;
+        float: none;
+        }
+        padding-left: 10px;
+    }
+    img {
+        padding:10px;
+    }
+    
+    h3 {
+        background: $mainColor;
+        font: {
+            size: 1.1rem;
+        }
+        color: white;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+}
+
+.readmore {
+    float: right;
+    font: {
+        size:0.8rem;
+        weight: bold;
+    }
+    padding: 2px;
+}
+
+//sidebar styles
+
+.sidebar{
+    margin-top: 30px;
+    margin-left: 5px;
+    width: 195px;
+    float: left;
+}
+
+.sidbar-header {
+    height: 25px;
+	background-color: $mainColor;
+    line-height: 25px;
+    padding-left: 5px;
+    color: white;
 	font: {
 		family: $navFont;
 		size: 14px;
 	}
-	padding: 0px 10px;
-	// background-color: lighten($mainColor, 30);
-	line-height: 25px;
+    
 }
 
+.sidebar01 {
+    img {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+//        float: left;
+    }
+    
+    margin-bottom: 10px;
+    
+}
+
+.sidebar01 h5 {
+    width: 100px;
+    margin-right: 40px;
+    font: {
+        size: 0.7vw;
+    }
+    float: right;
+    height: 50px;
+    padding-top: 15px;
+    overflow-wrap: break-word;
+    
+}
+
+.recipes:nth-of-type(odd){
+    background: $gray-light;
+}
+.recipes:nth-of-type(even){
+    background: $gray-lighter;
+}
+
+.sidebar02{
+    background: white;
+    
+    li {
+        padding: 6px;
+        font: {
+            size: 0.7rem;
+            weight: 700;
+        }
+    }
+    
+    }
 
 
 
 
+//footer styles
+footer {
+    width: 100%;
+	height: 25px;
+	background-color: $footerColor;
+    display: flex;
+	justify-content: space-around;
+}
 
+footer p {
+    color: white;
+	font: {
+		family: $navFont;
+		size: 12px;
+	}
+    line-height: 25px;
+    
+    
+}
 
 
