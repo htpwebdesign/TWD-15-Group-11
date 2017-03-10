@@ -8,6 +8,8 @@ $gray:gray;
 $gray-light: lighten($gray,40);
 $gray-lighter: lighten($gray,80);
 $mainColor: #1b7bb9;
+$mainColor-light: lighten($mainColor, 3);
+$mainColor-dark: darken($mainColor, 5);
 $navColor:#005991;
 $footerColor:#005991;
 

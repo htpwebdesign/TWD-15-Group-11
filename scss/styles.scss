@@ -49,8 +49,7 @@ header {
     margin-top: 15px;
     float: left;
     
-    @media (max-width:470px) {
-       
+    @media (max-width:470px) {       
         background-image: url(../images/small_logo.jpg);
         background-repeat: no-repeat;
         background-size: 15%;
@@ -72,6 +71,19 @@ header {
     @media (max-width:570px) {
         display: none;
     }
+    @media (max-width:470px) {
+        float: none;
+        display: block;
+        position: absolute;
+        top: 283px;
+        left: 0;
+        // margin-top: 300px;
+        // z-index: 10;
+		background: white;
+		width: 100%;
+		height: 40px;
+		padding-left: 37%;
+    }
 }
 
 .facebook {
@@ -86,6 +98,10 @@ header {
     &:hover {
         background-position: 29% 100%;
     }
+    @media (max-width:470px){
+    	margin-right: 8px;
+    }
+
 }
 
 .googleplus {
@@ -100,6 +116,9 @@ header {
     &:hover {
         background-position: 65% 100%;
     }
+	@media (max-width:470px){
+		margin-right: 8px;
+	}
 }
 
 .twitter {
@@ -114,6 +133,7 @@ header {
     &:hover {
         background-position: 100% 100%;
     }
+
 }
 
 
@@ -133,14 +153,15 @@ header {
     }
 
     @media (max-width:470px) {
-        display: none;
+        left: 0px;
+        top: 0px;
+        width: 100%;
     }
 }
 
 form input[type="text"]{
     width: 150px;
     position: relative;
-    
     height: 25px;
     font: {
         size:0.7rem;
@@ -148,6 +169,12 @@ form input[type="text"]{
     padding-left: 5px;
     background: $gray-light;
     border: none;
+    @media (max-width:470px) {
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid $mainColor;
+        border-bottom: 1px solid $mainColor;
+    }
     
 }
 
@@ -158,6 +185,10 @@ form input[type="text"]{
      right: 10px;
      font-size: 15px;
      color: $mainColor;
+     @media (max-width:470px) {
+         right: 13px;
+         top: 11px;
+     }
 }
 
 
@@ -170,7 +201,7 @@ form input[type="text"]{
 	position: absolute;
 	top: 15px;
 	right: 14px;
-    width: 40px;
+    width: 35px;
     height: 35px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
@@ -189,26 +220,11 @@ form input[type="text"]{
 
 
 
-
 .mobile-nav {
     display: none;
     position: absolute;
     top: 16px;
     right: 10px;
-
-    // .hamburger {
-    //     width: 40px;
-    //     height: 35px;
-    //     border: none;
-    //     background-color: rgba(255, 255, 255, 0);
-    //     background-image: url(../images/menu.png);
-    //     background-position: 100% 0%;
-    //     background-repeat: no-repeat;
-    //     cursor: pointer;
-    //     &:hover {
-    //         background-position: 100% 100%;
-    //     }
-    // }
     
     @media (max-width:470px) {
        display: block;
@@ -238,7 +254,27 @@ form input[type="text"]{
     }
 
     @media (max-width:470px) {
-       height: 300px;
+       height: 250px;
+       background: $mainColor-light;
+       ul {
+       	flex-direction: column;
+       	padding: 35px 0px;
+       }
+       li {
+		display: flex;
+		flex: 1;
+		height: 40px;
+		border-bottom: 1px solid $mainColor-dark;
+		& :hover {
+			background: white;
+			color: $mainColor;
+		}
+       }
+       a {
+       	text-align: center;
+       }
+
+
     }
 }
 
@@ -260,9 +296,17 @@ form input[type="text"]{
           
     }
 
-    // @media (max-width:470px) {
-    //    display: none;
-    // }
+    @media (max-width:470px) {
+    	background: none;
+    	a {
+    		line-height: 40px;
+    		font: {
+    			weight: 600;
+    			size: 18px;
+    		}
+    	}
+    }
+
 }
 
 
@@ -421,7 +465,7 @@ footer p {
 @media (max-width:470px){
 	.show-mobile-nav .main-nav {
 			/* open state */
-			height: 350px;
+			height: 275px;
 
 	}
 
