@@ -6,8 +6,8 @@
 article {
     position: relative;
     background: white;
-    padding-bottom: 30px;
-    margin-bottom: 1%;
+    padding-bottom: 45px;
+    margin-top: 15px;
     
     h1 {
         font: {
@@ -47,6 +47,8 @@ article {
     font: {
         size:0.8rem;
         weight: bold;
+        family: $navFont;
     }
-    padding: 2px;
+    padding: 6px;
 }
+
