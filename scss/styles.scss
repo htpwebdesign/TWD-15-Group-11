@@ -164,25 +164,51 @@ form input[type="text"]{
 
 // nav styles
 
+.hamburger {
+	display: none;
+	float: right;
+	position: absolute;
+	top: 15px;
+	right: 14px;
+    width: 40px;
+    height: 35px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(../images/menu.png);
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:hover {
+        background-position: 100% 100%;
+    }
+    @media (max-width:470px) {
+        display: block;
+    }
+}
+
+
+
+
+
 .mobile-nav {
     display: none;
     position: absolute;
     top: 16px;
     right: 10px;
 
-    .hamburger {
-        width: 40px;
-        height: 35px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0);
-        background-image: url(../images/menu.png);
-        background-position: 100% 0%;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        &:hover {
-            background-position: 100% 100%;
-        }
-    }
+    // .hamburger {
+    //     width: 40px;
+    //     height: 35px;
+    //     border: none;
+    //     background-color: rgba(255, 255, 255, 0);
+    //     background-image: url(../images/menu.png);
+    //     background-position: 100% 0%;
+    //     background-repeat: no-repeat;
+    //     cursor: pointer;
+    //     &:hover {
+    //         background-position: 100% 100%;
+    //     }
+    // }
     
     @media (max-width:470px) {
        display: block;
@@ -212,7 +238,7 @@ form input[type="text"]{
     }
 
     @media (max-width:470px) {
-       height: 3px;
+       height: 300px;
     }
 }
 
@@ -234,9 +260,9 @@ form input[type="text"]{
           
     }
 
-    @media (max-width:470px) {
-       display: none;
-    }
+    // @media (max-width:470px) {
+    //    display: none;
+    // }
 }
 
 
@@ -385,5 +411,41 @@ footer p {
     } 
     
 }
+
+
+
+//  media queries testing
+
+
+
+@media (max-width:470px){
+	.show-mobile-nav .main-nav {
+			/* open state */
+			height: 350px;
+
+	}
+
+	.main-nav {
+			/* hidden state */	
+			height: 0;
+			overflow: hidden;
+			transition: height 0.4s ease;
+			width: 100%;
+			padding-right: 0;
+	}
+
+	.main-nav a {
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
+
+
 
 
