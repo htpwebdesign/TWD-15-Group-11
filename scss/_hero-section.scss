@@ -11,6 +11,12 @@ figure:nth-child(1){
 figure:nth-child(2),
 figure:nth-child(3) {
     width: calc((100% / 2) - 2px); 
+    
+    @media (max-width:470px) {
+        width: 100%;
+        margin-bottom: 4px;
+        
+    } 
 }
 
 figure:nth-child(2){
