@@ -210,6 +210,10 @@ form input[type="text"]{
 	li {
 		list-style: none;
 	}
+
+	@media (max-width:470px) {
+	   height: 3px;
+	}
 }
 
 .navbar {
@@ -230,6 +234,9 @@ form input[type="text"]{
           
     }
 
+    @media (max-width:470px) {
+       display: none;
+    }
 }
 
 
