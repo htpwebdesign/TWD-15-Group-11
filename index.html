@@ -4,33 +4,33 @@
 <meta charset="utf-8">
 <title>Food Explorer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="styles/styles.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300" rel="stylesheet">
 </head>
-<body class="show-mobile-menu">
+<body>
 
 <header>
-	<div class="top-header">
+    <div class="top-header">
         <div class="logo"></div>
-		<div class="social">
+        <div class="social">
             <div class="facebook"></div> 
             <div class="googleplus"></div>  
             <div class="twitter"></div>       
         </div>
-	</div>
+    </div>
 
 
-	<nav class="main-nav">
+    <nav class="main-nav">
 
-		<div class="navbar">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Reviews</a></li>
-				<li><a href="#">Recipes</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
             <div class="search">
             <form>
@@ -38,14 +38,14 @@
                 <input type="text" placeholder="Search..." required>
             </form>
             </div>
-		</div>
+        </div>
 
         <nav class="mobile-nav">
             <button class="hamburger"></button>
         </nav>
 
 
-	</nav>
+    </nav>
 
 
 
@@ -55,11 +55,14 @@
 
 <div class="wrapper">
 
-	<div class="container">
+    <div class="container">
         <section class="hero-section">
             <figure>
-                <img src="images/mussel.jpg" alt="mussel" />
-                <figcaption>SED AUCTOR DAPIBUS IPSUM</figcaption>
+                <picture class="featured-image">
+                    <source srcset="images/mussel_small.jpg" media="(max-width:470px)" >
+                    <img src="images/mussel.jpg" alt="mussel" /> 
+                    <figcaption>SED AUCTOR DAPIBUS IPSUM</figcaption>       
+            </picture>
             </figure>
             <figure>
                 <img src="images/salad.jpg" alt="salad" />
@@ -89,13 +92,13 @@
                 <h3 class="readmore">READ MORE...</h3>
             </article>
         </section>
-	</div>
+    </div>
 
 
-	<div class="sidebar">
+    <div class="sidebar">
         <div class="sidebar01">
         <div class="sidbar-header">
-		  <h4>LATEST RECIPES</h4>
+          <h4>LATEST RECIPES</h4>
         </div>
             <div class="recipes">
             <img src="images/lamb_tb.jpg" alt="lamb" />
@@ -117,7 +120,7 @@
         
         <div class="sidebar02">
         <div class="sidbar-header">
-		  <h4>CUISINES</h4>
+          <h4>CUISINES</h4>
         </div>
             <ul>
                 <li>AMERICAN(95)</li>
@@ -139,7 +142,7 @@
                 <li>SOUTHERN(14)</li>
             </ul>
         </div>
-	</div>
+    </div>
     
         <div class="order">
         
@@ -151,9 +154,8 @@
 <footer>
         <p>@copy; 2013 Site designed by Micheal Lee For educational purposes only .<a href="#" title="Image- Credit">Image Credit</a> </p>
 </footer>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/3fd6374ec1.js"></script>
-<script src="scripts/scripts.js"></script>
 
 </body>
 </html>

@@ -1,15 +1,15 @@
 //// JavaScript Document
 
-var $body = $('body');
+var $body = $('nav');
 var $btnMobileMenu = $('.hamburger');
 
 
-$body.removeClass('show-mobile-menu');
+$body.removeClass('main-nav');
 
 $btnMobileMenu.click(function(){
 	
 	
-    alert('hello');
-	$body.toggleClass('show-mobile-menu');
+//    alert('hello');
+	$body.toggleClass('main-nav');
 	
 });
